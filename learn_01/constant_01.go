@@ -93,4 +93,5 @@ func main() {
 	fmt.Println("A1,A2")
 	fmt.Println(A1)
 	fmt.Println(A2)
+	const ints int = 1234567890
 }
