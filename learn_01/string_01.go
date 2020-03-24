@@ -75,19 +75,19 @@ func main() {
 		h[len(h)-i-1] = tmp
 	}
 	fmt.Println(string(h))
-	// 判断一个字符串是否是回文
 
+	// 判断一个字符串是否是回文
 	j := "abcdefgfedcba"
 	k := []byte(j)
-	for i:=0;i<len(k);i++{
-		tmp:=k[i]
-		k[i]=k[len(k)-i-1]
-		k[len(k)-i-1]=tmp
+	for i := 0; i < len(k); i++ {
+		tmp := k[i]
+		k[i] = k[len(k)-i-1]
+		k[len(k)-i-1] = tmp
 
 	}
-	if string(k)==j{
+	if string(k) == j {
 		fmt.Println("这个字符串是回文")
-	}else{
+	} else {
 		fmt.Println("这个字符串不是回文")
 	}
 }
