@@ -24,7 +24,15 @@ func calc(a, b int) (int, int) {
 	return a + b, a - b
 }
 
-//
+// 将函数作为参数,又叫做函数回调
+//func add(a, b int) int {
+//	return a + b
+//}
+
+func operator(f func(int, int) int) {
+	num := f(10, 20)
+	fmt.Println(num)
+}
 
 func testdefer() {
 	defer fmt.Println("性感法师")
@@ -58,6 +66,9 @@ func main() {
 	add1(1, 2)
 	sum, sub := calc(2, 1)
 	fmt.Printf("sum=%d,sub=%d\n", sum, sub)
+
+	operator(add)
+
 	// func(){}() 匿名函数后面加一个括号代表是匿名函数调用
 	func() { fmt.Println("匿名函数") }()
 
