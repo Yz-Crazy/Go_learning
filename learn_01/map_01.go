@@ -47,6 +47,21 @@ func testPointer() {
 	//*c = 100
 	//fmt.Println(c)
 	//
+
+	// 指针变量
+	// var 指针变量 *数据类型=&变量
+	// 指针变量除了有正确指向，还可以通过new()函数来指向
+	// new(数据类型)
+	// new() 函数的作用就是动态分配空间，不需要关心该空间的释放，Go 语言会自动释放
+	var s *int
+	// 创建一个int大小的内存空间，返回值为 *int
+	s = new(int)
+	*s = 123
+	// 打印值
+	fmt.Println(*s)
+	// 打印地址
+	fmt.Println(s)
+
 }
 
 func main() {
