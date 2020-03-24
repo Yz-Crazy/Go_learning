@@ -36,6 +36,7 @@ func BubbleSortSlice(arr []int) []int {
 
 func main() {
 	// var 数组名 [元素个数]数据类型
+	//var arrary[...]int{}    // 不确定有多少数据
 	var arr [10]int
 	arr[0] = 123
 	fmt.Println(arr)
@@ -71,9 +72,9 @@ func main() {
 	// 切片的拷贝
 	ss := make([]int, 10, 20)
 	copy(ss, slicec)
-	ss[1]=123
-	fmt.Printf("%p\n",ss)
-	fmt.Printf("%p\n",slicec)
+	ss[1] = 123
+	fmt.Printf("%p\n", ss)
+	fmt.Printf("%p\n", slicec)
 	fmt.Println(ss)
 	fmt.Println(slicec)
 }
