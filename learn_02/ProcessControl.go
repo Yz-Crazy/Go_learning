@@ -50,6 +50,13 @@ func testFor02() {
 	}
 }
 
+func testRange() {
+	a := [4]int{1, 2, 3, 4}
+	for i := range a {
+		fmt.Println(i)
+	}
+}
+
 func testFor03() {
 	for i := 0; i <= 10; i++ {
 		if i == 3 {
@@ -123,6 +130,7 @@ func testSwitch03() {
 	}
 }
 
+// 99乘法表
 func testMulti() {
 	for j := 1; j <= 9; j++ {
 		for k := 1; k <= j; k++ {
@@ -141,6 +149,7 @@ func main() {
 	testFor02()
 	testFor03()
 	testFor04()
+	testRange()
 	testSwitch01()
 	testSwitch02()
 	testSwitch03()
