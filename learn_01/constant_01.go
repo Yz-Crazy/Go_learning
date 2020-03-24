@@ -94,4 +94,5 @@ func main() {
 	fmt.Println(A1)
 	fmt.Println(A2)
 	const ints int = 1234567890
+	const str string = "字符串"
 }
