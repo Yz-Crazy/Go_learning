@@ -47,7 +47,7 @@ func main() {
 		case []interface{}:
 			fmt.Println("[]interface 类型：", key, v)
 			for k, v := range v {
-				switch vs:=v.(type) {
+				switch vs := v.(type) {
 				case string:
 					fmt.Println("string 类型", k, vs)
 

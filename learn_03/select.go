@@ -37,6 +37,6 @@ func main() {
 			fmt.Println("获取数据超时")
 
 		}
-		time.Sleep(time.Millisecond*1000)
+		time.Sleep(time.Millisecond * 1000)
 	}
 }

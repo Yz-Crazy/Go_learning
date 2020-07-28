@@ -30,5 +30,5 @@ func main() {
 		ch <- i
 		//time.Sleep(time.Millisecond)
 	}
-	fmt.Println(runtime.GOMAXPROCS(0))   // 查看CPU核心
+	fmt.Println(runtime.GOMAXPROCS(0)) // 查看CPU核心
 }

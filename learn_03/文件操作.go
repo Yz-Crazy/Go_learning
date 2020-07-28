@@ -21,7 +21,7 @@ func Create_File() {
 	// 写入数据
 	f.WriteString("你好，这是字符串类型写入\n")
 	// byte类型写入，一定要用单引号，而且不能有中文
-	b := []byte{'b', 'y', 't', 'e',' ','a','b'}
+	b := []byte{'b', 'y', 't', 'e', ' ', 'a', 'b'}
 	f.Write(b)
 	// slice 写入
 	str := "这个是切片类型写入"
@@ -39,37 +39,33 @@ func Open_File() {
 	f.WriteString("这是一个啥东西？？？")
 
 	// 文件操作
-	buf := make([]byte,1024)
+	buf := make([]byte, 1024)
 
 	// 读取文件内容
 	f.Read(buf)
 	fmt.Println(string(buf))
 
-
-
-
 }
 
-func Handle_Read_File(){
-	f,err:=os.Open("test.txt")
-	if err != nil{
-		fmt.Println("打开文件失败！",err)
+func Handle_Read_File() {
+	f, err := os.Open("test.txt")
+	if err != nil {
+		fmt.Println("打开文件失败！", err)
 		return
 	}
 	defer f.Close()
 	scanner := bufio.NewScanner(f)
-	for scanner.Scan(){
+	for scanner.Scan() {
 		// 这里二选一都可以
-		line:=scanner.Text()
+		line := scanner.Text()
 		// line:=scanner.Bytes()
-		fmt.Printf("%s\n",line)
+		fmt.Printf("%s\n", line)
 	}
 
-	if err := scanner.Err(); err!=nil{
-		log.Printf("读取文件报错：%s，err：[%v]","test.txt",err)
+	if err := scanner.Err(); err != nil {
+		log.Printf("读取文件报错：%s，err：[%v]", "test.txt", err)
 		return
 	}
-
 
 }
 
